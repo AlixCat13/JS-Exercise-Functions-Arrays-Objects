@@ -37,7 +37,7 @@ function addNumbers(num1, num2) {
  * 
 */
 function sayGoodbye(name) {
-  console.log("Goodbye, " + name + ".  Have a great day.");  
+  console.log("Goodbye, " + name + ". Have a great day.");  
 }
  sayGoodbye("Alix");
 
