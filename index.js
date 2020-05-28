@@ -104,9 +104,15 @@ temperatureInF(24, "C");
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject() {
+  let person = [
+   "id": 5,
+   "name": 'Leia',
+   "email": 'leia@leia.com',
+  ]
 }
+
+makePersonObject(5, 'Leia', 'leia@leia.come');
 
 /**
  * ### Challenge `getName`
@@ -121,8 +127,8 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName([id = 1, name = 'Leia', email = 'leia@leia.com']) { 
+  console.log (`Hello, my name is` + name`.`);
 }
 
 
