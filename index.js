@@ -37,12 +37,9 @@ function addNumbers(num1, num2) {
  * 
 */
 function sayGoodbye(name) {
-  return ("Goodbye," + name + ". Have a great day.")
-
-  
+  console.log("Goodbye, " + name + ".  Have a great day.");  
 }
-
-   let name = "Alix;"
+ sayGoodbye("Alix");
 
 /**
  * ### Challenge `temperatureCtoF`
