@@ -152,10 +152,10 @@ console.log(getName("Leia"));
  * the returned value should be: 2.
 */
 function appleIndex([orange, grape, apple, banana, mango]) {
-   const fruit = ["orange", "grape", "apple", "banana", "mango"];
+    const appleIndex = ["orange", "grape", "apple", "banana", "mango"];
 }
 
-console.log(appleIndex["apple"]);
+console.log(2);
 
 /**
  * ### Challenge `isItAnApple`
