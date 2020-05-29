@@ -181,6 +181,7 @@ console.log(appleIndex(fruits));
 */
 
 let newFruits = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]
+
 function isItAnApple(arry) {
   let newArry = [];
   for(let i = 0; i < arry.length; i++){
@@ -249,9 +250,18 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
+// import {module.exports} from 'data\inventory.js';
+
+
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  module.exports = [];
+  import {inventory} from '.data/inventory.js';
+
+  const vehicle = inventory[0];
+  return `The is a ${vehicle.car_make} ${vehicle.car_model}`
 }
+
+console.log(require('./data')getCarInfoByIndex(inventory, 0));
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -264,9 +274,15 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory, index) {
+  module.exports = [];
+  import {inventory} from '.data/inventory.js';
+
+  const vehicle = inventory[-1];
+  return `The is a ${vehicle.car_make} ${vehicle.car_model}`
 }
+
+console.log(require('./data')getCarInfoByIndex(inventory, -1)/
 
 /**
  * ### Challenge `getModelYears`
@@ -277,9 +293,12 @@ function getLastCarInfo(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory, year) {
+  return [.car_year];
+
 }
+console.log(inventory,[car_year]);
+
 
 /**
  * ### Challenge `getCarInfoById`
