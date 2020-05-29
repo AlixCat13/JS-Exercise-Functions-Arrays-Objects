@@ -37,9 +37,9 @@ function addNumbers(num1, num2) {
  * 
 */
 function sayGoodbye(name) {
-  console.log("Goodbye, " + name + ". Have a great day.");  
+  return `Goodbye, ${name}. Have a great day.`
 }
- sayGoodbye("Alix");
+ console.log(sayGoodbye("Alix"));
 
 /**
  * ### Challenge `temperatureCtoF`
@@ -56,10 +56,10 @@ function sayGoodbye(name) {
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
 function temperatureCtoF(C) {
-  console.log(Math.round(C*9/5 + 32));
+  return Math.round(C*9/5 + 32);
 }
 
-temperatureCtoF(24);
+console.log(temperatureCtoF(24));
 
 /**
  * ### Challenge `temperatureInF`
@@ -79,16 +79,16 @@ temperatureCtoF(24);
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
  function temperatureInF(Temp,Degree) {
-      if (Degree === "F") 
-     {
-       console.log(Temp + "F");
+      if (Degree === "F") {     
+       return Temp + Degree;
       }
-   else (Degree === "C") 
-   {
-     console.log(Math.round(Temp*9/5 + 32) + "F");
+  
+   else {      
+     return Math.round(Temp*9/5 + 32) + "F";
       }
-  }
-     temperatureInF(30,"C");
+    }
+  
+  console.log(temperatureInF(30,"C"));
 
 
 /**
@@ -151,11 +151,18 @@ console.log(getName("Leia"));
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex([orange, grape, apple, banana, mango]) {
-    const appleIndex = ["orange", "grape", "apple", "banana", "mango"];
+
+fruits = [ 'orange', 'grape', 'apple', 'banana', 'mango' ]
+
+function appleIndex(arr) {
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] === "apple")
+    return i;
+  }
+    return arr[2];
 }
 
-console.log(2);
+console.log(appleIndex(fruits));
 
 /**
  * ### Challenge `isItAnApple`
@@ -172,10 +179,23 @@ console.log(2);
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+
+let newFruits = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ]
+function isItAnApple(arry) {
+  let newArry = [];
+  for(let i = 0; i < arry.length; i++){
+    if(arry[i] === "apple"){
+    newArry.push(true);
+  }
+  else if (arry[i !== "apple"]){
+    newArry.push(false);
+  }
+}
+  return newArry;
 }
 
+
+console.log(isItAnApple(newFruits));
 
 
 
