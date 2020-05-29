@@ -107,15 +107,16 @@ temperatureCtoF(24);
  *   email: "leia@leia.com",
  * }
 */
-  function makePersonObject(id, name, email, person) {
-    let myObj = {
-      id: 5,
-      name: "Leia",
-      email: "leia@leia.com",
-      }
-    }
+   function makePersonObject(id, name, email) {
+     var person = {
+       id: id,
+       name: name,
+       email: email,
+       }
+       return(person);
+     }
 
-    console.log(myObj);
+    console.log(makePersonObject(5, "Leia", "leia@leia.com"));
 
 /**
  * ### Challenge `getName`
@@ -150,11 +151,11 @@ console.log(`Hello, my name is ` + name,`.`);
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex() {
-  let Fruit = ["orange", "grape", "apple", "banana", "mango"];
-}
+// function appleIndex(["orange", "grape", "apple", ""]) {
+//    const fruit = ["orange", "grape", "apple", "banana", "mango"];
+// }
 
-console.log(Fruit.appleIndex);
+// console.log(appleIndex["apple"]);
 
 /**
  * ### Challenge `isItAnApple`
