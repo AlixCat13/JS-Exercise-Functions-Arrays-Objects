@@ -254,14 +254,14 @@ function get3rdCar(inventory) {
 
 
 function getCarInfoByIndex(inventory, index) {
-  module.exports = [];
-  import {inventory} from '.data/inventory.js';
-
+  
   const vehicle = inventory[0];
   return `The is a ${vehicle.car_make} ${vehicle.car_model}`
 }
 
-console.log(require('./data')getCarInfoByIndex(inventory, 0));
+console.log(getCarInfoByIndex(inventory,[0]));
+
+const arr = require("./data/inventory.js");
 
 /**
  * ### Challenge `getLastCarInfo`
@@ -274,16 +274,14 @@ console.log(require('./data')getCarInfoByIndex(inventory, 0));
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(inventory, index) {
-  module.exports = [];
-  import {inventory} from '.data/inventory.js';
+function getLastCarInfo(banana) {
 
-  const vehicle = inventory[-1];
-  return `The is a ${vehicle.car_make} ${vehicle.car_model}`
+  return `The is a ${banana[banana.length-1].car_make} ${banana[banana.length-1].car_model}`
 }
-
-console.log(require('./data')getCarInfoByIndex(inventory, -1)/
-
+console.log(arr[10].car_year);
+console.log(getLastCarInfo(arr));
+//console.log(arr[49].car_make, arr[49].car_model);
+console.log(getLastCarInfo(inventory));
 /**
  * ### Challenge `getModelYears`
  * 
@@ -293,11 +291,16 @@ console.log(require('./data')getCarInfoByIndex(inventory, -1)/
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(inventory, year) {
-  return [.car_year];
-
-}
-console.log(inventory,[car_year]);
+   function getModelYears(inv) {
+      //return newArry =[inv[0].car_year, inv[1].car_year, inv[2].car_year, inv[3].car_year, inv[4].car_year] 
+     let newArry = [].car_years; 
+      for (let i = 0; i < inv.length; i++){
+        console.log(`$(newArry)`);
+      };
+        
+      
+    }
+console.log(getModelYears(arr))
 
 
 /**
