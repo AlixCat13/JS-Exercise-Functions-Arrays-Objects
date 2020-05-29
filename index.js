@@ -78,14 +78,17 @@ temperatureCtoF(24);
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(Temp,Degree) {
-  if (Degree = "F") {
-    console.log(Temp + "F");
+ function temperatureInF(Temp,Degree) {
+      if (Degree === "F") 
+     {
+       console.log(Temp + "F");
+      }
+   else (Degree === "C") 
+   {
+     console.log(Math.round(Temp*9/5 + 32) + "F");
+      }
   }
-  else (Degree = "C") 
-    console.log(Math.round(Temp*9/5 + 32));
-}
-temperatureInF(24, "C");
+     temperatureInF(30,"C");
 
 
 /**
@@ -104,15 +107,15 @@ temperatureInF(24, "C");
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject() {
-  let person = [
-   "id": 5,
-   "name": 'Leia',
-   "email": 'leia@leia.com',
-  ]
-}
+  function makePersonObject(id, name, email, person) {
+    let myObj = {
+      id: 5,
+      name: "Leia",
+      email: "leia@leia.com",
+      }
+    }
 
-makePersonObject(5, 'Leia', 'leia@leia.come');
+    console.log(myObj);
 
 /**
  * ### Challenge `getName`
@@ -128,9 +131,9 @@ makePersonObject(5, 'Leia', 'leia@leia.come');
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName([id = 1, name = 'Leia', email = 'leia@leia.com']) { 
-  console.log (`Hello, my name is` + name`.`);
+  return (`Hello, my name is ` + name,`.`);
 }
-
+console.log(`Hello, my name is ` + name,`.`);
 
 /**
  * ### Challenge `appleIndex`
@@ -147,9 +150,11 @@ function getName([id = 1, name = 'Leia', email = 'leia@leia.com']) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex() {
+  let Fruit = ["orange", "grape", "apple", "banana", "mango"];
 }
+
+console.log(Fruit.appleIndex);
 
 /**
  * ### Challenge `isItAnApple`
