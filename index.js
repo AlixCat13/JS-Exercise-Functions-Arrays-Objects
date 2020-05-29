@@ -131,10 +131,10 @@ temperatureCtoF(24);
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName([id = 1, name = 'Leia', email = 'leia@leia.com']) { 
-  return (`Hello, my name is ` + name,`.`);
+function getName(name) { 
+  return ("Hello, my name is " + name +".");
 }
-console.log(`Hello, my name is ` + name,`.`);
+console.log(getName("Leia"));
 
 /**
  * ### Challenge `appleIndex`
@@ -151,11 +151,11 @@ console.log(`Hello, my name is ` + name,`.`);
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-// function appleIndex(["orange", "grape", "apple", ""]) {
-//    const fruit = ["orange", "grape", "apple", "banana", "mango"];
-// }
+function appleIndex([orange, grape, apple, banana, mango]) {
+   const fruit = ["orange", "grape", "apple", "banana", "mango"];
+}
 
-// console.log(appleIndex["apple"]);
+console.log(appleIndex["apple"]);
 
 /**
  * ### Challenge `isItAnApple`
