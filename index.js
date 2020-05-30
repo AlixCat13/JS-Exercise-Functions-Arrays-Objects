@@ -295,7 +295,7 @@ console.log(getLastCarInfo(inventory));
       //return newArry =[inv[0].car_year, inv[1].car_year, inv[2].car_year, inv[3].car_year, inv[4].car_year] 
      let newArry = [].car_years; 
       for (let i = 0; i < inv.length; i++){
-        console.log(`$(newArry)`);
+        return(newArry);
       };
         
       
